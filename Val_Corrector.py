@@ -1,4 +1,4 @@
-def corrector(val):
+def corrector(val): # correct a single value
     if val.isdecimal() and val.isnumeric():
         num = int(val)
         return num
@@ -9,7 +9,7 @@ def corrector(val):
     else:
         return val
 
-def corrector_list(list):
+def corrector_list(list): # correct a list of vaules
     temp = []
     for i in list:
         if i.isdecimal() and i.isnumeric():

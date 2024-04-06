@@ -1,9 +1,9 @@
 from Val_Corrector import *
-def save(file, data, symbol):
-    with open(file, 'r+') as f:
+def save(file, data, symbol): # save data in file with a specific symbol
+    with open(file, 'w') as f:
         for i in data:
             f.write(str(i) + symbol)
-def load(file, symbol):
+def load(file, symbol): # read data
     with open(file, 'r+') as f:
         data = f.read()
         temp = data.split(str(symbol))

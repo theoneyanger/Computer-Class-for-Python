@@ -1,128 +1,150 @@
-from Computers import *
+from Computers import Computer
+
+comp_list = ['Aphrodite',
+             'Helix',
+             'Titan',
+             'Pulse',
+             'Quantum',
+             'Stellar',
+             'Core',
+             'Infinity',
+             'HyperFlex',
+             'Solar',]
 def ask():
     for i in comp_list:
         print(i)
-    choice = input("Select a computer model:\n")
-    if choice == 'Aphrodite':
-        print("Aphrodite: This computer is designed to handle a lot of devices and act like a Super-Hub")
-        yn = input("Confirm choice (y/n) ?\n")
-        if yn == 'y':
-            file = input("Select save to associate this computer with (Mem_1.txt, Mem_2.txt, Mem_3.txt Case sensitive):\n")
+    choice = input("Select computer to use:\n")
+    if choice.title() in comp_list:
+        if choice.lower() == 'aphrodite':
+            file = input("Select save to associate this computer with (1, 2, 3):\n")
+            if int(file) < 4 and int(file) > 0:
+                file = f'Mem_{file}.txt'
             my_computer = Computer('Aphrodite',
-                                   30,
+                                   3050,
                                    8,
                                    'PhoenixOS',
                                    150,
-                                   10, 100,
+                                   10,
                                    file)
             print("Your computer is ready to go!")
             my_computer.full_setup()
-        elif yn == 'n':
-            ask()
-    elif choice == 'Helix':
-        print("Helix: This computer is specifically designed to perform complex operations in seconds")
-        yn = input("Confirm choice (y/n) ?\n")
-        if yn == 'y':
-            file = input(
-                "Select save to associate this computer with (Mem_1.txt, Mem_2.txt, Mem_3.txt Case sensitive):\n")
+        elif choice.lower() == 'helix':
+            file = input("Select save to associate this computer with (1, 2, 3):\n")
+            if int(file) < 4 and int(file) > 0:
+                file = f'Mem_{file}.txt'
             my_computer = Computer('Helix',
-                                   20,
+                                   2024,
                                    32,
                                    'PhoenixOS',
                                    350,
                                    2,
-                                   100,
                                    file)
             print("Your computer is ready to go!")
             my_computer.full_setup()
-        elif yn == 'n':
-            ask()
-    elif choice == 'Titan':
-        print("Titan: This computer, as it's name suggests,can store enormous amounts of data")
-        yn = input("Confirm choice (y/n) ?\n")
-        if yn == 'y':
-            file = input("Select save to associate this computer with (Mem_1.txt, Mem_2.txt, Mem_3.txt Case sensitive):\n")
+        elif choice.lower() == 'titan':
+            file = input("Select save to associate this computer with (1, 2, 3):\n")
+            if int(file) < 4 and int(file) > 0:
+                file = f'Mem_{file}.txt'
             my_computer = Computer('Titan',
-                                   40,
+                                   8000,
                                    16,
                                    'AuroraOS',
                                    350,
                                    4,
-                                   100,
                                    file)
             print("Your computer is ready to go!")
             my_computer.full_setup()
-        elif yn == 'n':
-            ask()
-    elif choice == 'Pulse':
-        print("Pulse: Specifically made for scientific operations. It has it's own, unique OS")
-        yn = input("Confirm choice (y/n) ?\n")
-        if yn == 'y':
-            file = input("Select save to associate this computer with (Mem_1.txt, Mem_2.txt, Mem_3.txt Case sensitive):\n")
+        elif choice.lower() == 'pulse':
+            file = input("Select save to associate this computer with (1, 2, 3):\n")
+            if int(file) < 4 and int(file) > 0:
+                file = f'Mem_{file}.txt'
             my_computer = Computer('Pulse',
-                                   20,
+                                   2000,
                                    32,
                                    'PulseOS',
                                    350,
                                    12,
-                                   100,
                                    file)
             print("Your computer is ready to go!")
             my_computer.full_setup()
-        elif yn == 'n':
-            ask()
-    elif choice == 'DF':
-        print("DF: The most basic computer, jack of all trades")
-        yn = input("Confirm choice (y/n) ?\n")
-        if yn == 'y':
-            file = input("Select save to associate this computer with (Mem_1.txt, Mem_2.txt, Mem_3.txt Case sensitive):\n")
-            my_computer = Computer('Default',
-                                   30,
-                                   4,
-                                   'AuroraOS',
-                                   150,
-                                   5,
-                                   100,
-                                   file)
-            print("Your computer is ready to go!")
-            my_computer.full_setup()
-        elif yn == 'n':
-            ask()
-    elif choice == '3n1gm4':
-        print("A broken computer, with outdated peripherals and OS. Needs repair")
-        yn = input("Confirm choice (y/n) ?\n")
-        if yn == 'y':
-            file = input("Select save to associate this computer with (Mem_1.txt, Mem_2.txt, Mem_3.txt Case sensitive):\n")
-            my_computer = Computer('3n1gm4',
-                                   10,
-                                   4,
-                                   'EnigmaOS',
-                                   50,
-                                   2,
-                                   25,
-                                   file)
-            print("Your computer is ready to go!")
-            my_computer.full_setup()
-        elif yn == 'n':
-            ask()
-    elif choice == 'OP':
-        print("Pretty self explanatory")
-        yn = input("Confirm choice (y/n) ?\n")
-        if yn == 'y':
-            file = input("Select save to associate this computer with (Mem_1.txt, Mem_2.txt, Mem_3.txt Case sensitive):\n")
-            my_computer = Computer('OP',
+        elif choice.lower() == 'quantum':
+            file = input("Select save to associate this computer with (1, 2, 3):\n")
+            if int(file) < 4 and int(file) > 0:
+                file = f'Mem_{file}.txt'
+            my_computer = Computer('Quantum',
                                    1000,
-                                   4000,
-                                   'OPOS',
-                                   5000,
-                                   22,
-                                   100,
+                                   3500,
+                                   'QuantumOS',
+                                   3500,
+                                   4,
                                    file)
             print("Your computer is ready to go!")
             my_computer.full_setup()
-        elif yn == 'n':
-            ask()
-comp_list = ['Aphrodite', 'Helix', 'Titan', 'Pulse', 'DF', '3n1gm4', 'OP']
+        elif choice.lower() == 'stellar':
+            file = input("Select save to associate this computer with (1, 2, 3):\n")
+            if int(file) < 4 and int(file) > 0:
+                file = f'Mem_{file}.txt'
+            my_computer = Computer('Stellar',
+                                   100,
+                                   5500,
+                                   'GalaxyOS',
+                                   3700,
+                                   7,
+                                   file)
+            print("Your computer is ready to go!")
+            my_computer.full_setup()
+        elif choice.lower() == 'core':
+            file = input("Select save to associate this computer with (1, 2, 3):\n")
+            if int(file) < 4 and int(file) > 0:
+                file = f'Mem_{file}.txt'
+            my_computer = Computer('Core',
+                                   550,
+                                   5300,
+                                   'ChronosOS',
+                                   3300,
+                                   1,
+                                   file)
+            print("Your computer is ready to go!")
+            my_computer.full_setup()
+        elif choice.lower() == 'infinity':
+            file = input("Select save to associate this computer with (1, 2, 3):\n")
+            if int(file) < 4 and int(file) > 0:
+                file = f'Mem_{file}.txt'
+            my_computer = Computer('Infinity',
+                                   750,
+                                   7000,
+                                   'NovaOS',
+                                   5500,
+                                   4,
+                                   file)
+            print("Your computer is ready to go!")
+            my_computer.full_setup()
+        elif choice.lower() == 'hyperflex':
+            file = input("Select save to associate this computer with (1, 2, 3):\n")
+            if int(file) < 4 and int(file) > 0:
+                file = f'Mem_{file}.txt'
+            my_computer = Computer('HyperFlex',
+                                   670,
+                                   8000,
+                                   'PixelOS',
+                                   6000,
+                                   4,
+                                   file)
+            print("Your computer is ready to go!")
+            my_computer.full_setup()
+        elif choice.lower() == 'solar':
+            file = input("Select save to associate this computer with (1, 2, 3):\n")
+            if int(file) < 4 and int(file) > 0:
+                file = f'Mem_{file}.txt'
+            my_computer = Computer('Solar',
+                                   570,
+                                   7800,
+                                   'SolarisOS',
+                                   5600,
+                                   3,
+                                   file)
+            print("Your computer is ready to go!")
+            my_computer.full_setup()
 print("Here are some ready computer models, just for you")
-print("More are coming soon")
+print("More are coming soon ;)")
 ask()
